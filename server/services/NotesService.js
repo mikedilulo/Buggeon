@@ -8,6 +8,9 @@ class NotesService {
   async getAll() {
     return await _repository.find({});
   }
+  async getNotesByBugId(bug) {
+    return await _repository.find({ bug });
+  }
   async getNoteById(id) {
     let data = await _repository.findById(id);
     if (!data) {

@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-// TODO Need to make a jobs model that I can import into this service
+import Job from "../models/Job";
 import ApiError from "../utils/ApiError";
 
 const _repository = mongoose.model("Job", Job);
