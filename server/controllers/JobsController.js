@@ -1,5 +1,5 @@
 import express from "express";
-import valueService from "../services/ValueService";
+import jobsService from "../services/JobsService";
 
 export default class JobsController {
   constructor() {
