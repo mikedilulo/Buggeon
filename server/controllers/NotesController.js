@@ -51,7 +51,7 @@ export default class NotesController {
     try {
       // NOTE Not calling for data here, can just await the service sending it the id
       await notesService.deleteNote(req.params.id);
-      return res.send("Successfully Deleted The Bug");
+      return res.send("Successfully Deleted The Note From The Bug");
     } catch (error) {
       next(error);
     }
