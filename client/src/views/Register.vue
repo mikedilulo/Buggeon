@@ -1,5 +1,5 @@
 <template>
-  <div class="register background">
+  <div class="register backkground">
     <div class="row">
       <div class="col-md-12 pr-0 pl-0">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark pl-5">
@@ -143,7 +143,7 @@ export default {
 </script>
 
 <style>
-.background {
+.backkground {
   background: url("https://images.unsplash.com/photo-1561883088-039e53143d73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
   background-size: cover;
   background-repeat: no-repeat;
