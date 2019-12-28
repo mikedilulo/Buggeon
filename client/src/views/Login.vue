@@ -93,7 +93,9 @@
               </div>
               <div>
                 <!-- Forgot password -->
-                <a href class="text-warning">Forgot password?</a>
+                <router-link to="/password">
+                  <a href class="text-warning">Forgot password?</a>
+                </router-link>
               </div>
             </div>
 
