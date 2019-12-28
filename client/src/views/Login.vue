@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="login background-image">
     <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
     <div class="row">
@@ -143,13 +143,16 @@ export default {
 .companyIcon {
   font-size: 30px;
 }
-body {
+.background-image {
   background: url("https://images.unsplash.com/photo-1509822929063-6b6cfc9b42f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
   background-size: cover;
   background-repeat: no-repeat;
   width: 1901px;
-  height: 896px;
+  height: 975px;
+  padding-left: 0px;
+  margin-right: 0px;
 }
+
 .formGroup {
   margin-left: 120px;
 }
