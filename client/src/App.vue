@@ -54,6 +54,75 @@
             </ul>
           </div>
         </nav>
+        <div class="row">
+          <div class="col-md-3 formGroup">
+            <form class="text-center border border-white p-5 ml-5 mt-5" action="#!">
+              <p class="h4 mb-4 text-white">Sign in</p>
+
+              <!-- Email -->
+              <input
+                type="email"
+                id="defaultLoginFormEmail"
+                class="form-control mb-4"
+                placeholder="E-mail"
+              />
+
+              <!-- Password -->
+              <input
+                type="password"
+                id="defaultLoginFormPassword"
+                class="form-control mb-4"
+                placeholder="Password"
+              />
+
+              <div class="d-flex justify-content-around">
+                <div>
+                  <!-- Remember me -->
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="defaultLoginFormRemember"
+                    />
+                    <label
+                      class="custom-control-label text-white"
+                      for="defaultLoginFormRemember"
+                    >Remember me</label>
+                  </div>
+                </div>
+                <div>
+                  <!-- Forgot password -->
+                  <a href class="text-warning">Forgot password?</a>
+                </div>
+              </div>
+
+              <!-- Sign in button -->
+              <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+
+              <!-- Register -->
+              <p class="text-white">
+                Not a member?
+                <a href class="text-warning">Register</a>
+              </p>
+
+              <!-- Social login -->
+              <p class="text-white">or sign in with:</p>
+
+              <a href="#" class="mx-2 text-light" role="button">
+                <i class="fab fa-facebook-f light-blue-text"></i>
+              </a>
+              <a href="#" class="mx-2 text-light" role="button">
+                <i class="fab fa-twitter light-blue-text"></i>
+              </a>
+              <a href="#" class="mx-2 text-light" role="button">
+                <i class="fab fa-linkedin-in light-blue-text"></i>
+              </a>
+              <a href="#" class="mx-2 text-light" role="button">
+                <i class="fab fa-github light-blue-text"></i>
+              </a>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -92,5 +161,8 @@ body {
   background-repeat: no-repeat;
   width: 1901px;
   height: 896px;
+}
+.formGroup {
+  margin-left: 120px;
 }
 </style>
