@@ -54,7 +54,7 @@
         </nav>
         <div class="col-md-11 ml-5 d-flex justify-content-center text-white mt-4">
           <h1 class="mb-3">
-            STUCK ON YOUR CODE? NEED A LITTLE HELP? LET US HELP YOU
+            STUCK ON YOUR CODE? DO YOU LOVE TAB OR MOUNTAIN DEW? LET US HELP YOU
             <strong
               class="text-success"
             >BUGGEON</strong> YOUR WAY TO SUCCESS!
@@ -103,7 +103,9 @@
             <!-- Register -->
             <p class="text-white">
               Not a member?
-              <a href class="text-warning">Register</a>
+              <router-link to="/register">
+                <a href class="text-warning">Register</a>
+              </router-link>
             </p>
 
             <!-- Social login -->
