@@ -4,6 +4,8 @@ import VueRouter from "vue-router";
 import Login from "../views/Login.vue";
 // @ts-ignore
 import Register from "../views/Register.vue";
+// @ts-ignore
+import Password from "../views/Password.vue";
 
 Vue.use(VueRouter);
 
@@ -17,6 +19,11 @@ const routes = [
     path: "/register",
     name: "register",
     component: Register
+  },
+  {
+    path: "/password",
+    name: "password",
+    component: Password
   },
   {
     path: "/about",

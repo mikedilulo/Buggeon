@@ -104,7 +104,7 @@
           </div>
 
           <!-- Sign up button -->
-          <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+          <button class="btn btn-info my-4 btn-block" type="submit">Sign Up</button>
 
           <!-- Social register -->
           <p class="text-white">or sign up with:</p>
