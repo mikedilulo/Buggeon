@@ -3,7 +3,7 @@
     <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
     <div class="row">
-      <div class="col-md-12 ml-1 mr-0 pr-0 pl-0">
+      <div class="col-md-12 mr-0 pr-0 pl-0">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark pl-5">
           <a class="navbar-brand companyIcon">
             <i class="fas fa-bug"></i>
@@ -42,9 +42,11 @@
                 </router-link>
               </button>
               <button class="btn btn-secondary btn-lg ml-5 mr-5">
-                <li class="nav-item">
-                  <a class="nav-link text-white">Frequently Asked Questions</a>
-                </li>
+                <router-link to="/help">
+                  <li class="nav-item">
+                    <a class="nav-link text-white">Help Center</a>
+                  </li>
+                </router-link>
               </button>
               <button class="btn btn-info btn-lg ml-5">
                 <li class="nav-item">

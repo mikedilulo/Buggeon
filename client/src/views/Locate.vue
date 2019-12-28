@@ -1,7 +1,7 @@
 <template>
   <div class="locate bakkround">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12 pr-0 pl-0">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark pl-5">
           <a class="navbar-brand companyIcon">
             <i class="fas fa-bug"></i>
