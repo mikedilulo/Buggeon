@@ -35,9 +35,11 @@
                 </li>
               </button>
               <button class="btn btn-success btn-lg ml-5 mr-5">
-                <li class="nav-item">
-                  <a class="nav-link text-white">Locate a Bugger</a>
-                </li>
+                <router-link to="/locate">
+                  <li class="nav-item">
+                    <a class="nav-link text-white">Locate a Bugger</a>
+                  </li>
+                </router-link>
               </button>
               <button class="btn btn-secondary btn-lg ml-5 mr-5">
                 <li class="nav-item">

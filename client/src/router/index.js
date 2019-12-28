@@ -6,6 +6,8 @@ import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 // @ts-ignore
 import Password from "../views/Password.vue";
+// @ts-ignore
+import Locate from "../views/Locate.vue";
 
 Vue.use(VueRouter);
 
@@ -24,6 +26,11 @@ const routes = [
     path: "/password",
     name: "password",
     component: Password
+  },
+  {
+    path: "/locate",
+    name: "locate",
+    component: Locate
   },
   {
     path: "/about",
