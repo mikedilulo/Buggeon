@@ -98,7 +98,7 @@
             </div>
 
             <!-- Sign in button -->
-            <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+            <button class="btn btn-info btn-block my-4 btn-rounded" type="submit">Sign in</button>
 
             <!-- Register -->
             <p class="text-white">
@@ -109,16 +109,16 @@
             <!-- Social login -->
             <p class="text-white">or sign in with:</p>
 
-            <a href="#" class="mx-2 text-light" role="button">
+            <a href="https://www.facebook.com" class="mx-2 text-light" role="button">
               <i class="fab fa-facebook-f light-blue-text"></i>
             </a>
-            <a href="#" class="mx-2 text-light" role="button">
+            <a href="https://www.twitter.com" class="mx-2 text-light" role="button">
               <i class="fab fa-twitter light-blue-text"></i>
             </a>
-            <a href="#" class="mx-2 text-light" role="button">
+            <a href="https:www.instagram.com" class="mx-2 text-light" role="button">
               <i class="fab fa-linkedin-in light-blue-text"></i>
             </a>
-            <a href="#" class="mx-2 text-light" role="button">
+            <a href="https://www.github.com" class="mx-2 text-light" role="button">
               <i class="fab fa-github light-blue-text"></i>
             </a>
           </form>
