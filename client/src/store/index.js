@@ -29,7 +29,7 @@ export default new Vuex.Store({
       console.log(res.data);
     },
     async getAll({ commit, dispatch }) {
-      let res = await _buggeonApi.get("bug");
+      let res = await _buggeonApi.get("bugs");
       commit("allBugs", res.data);
     }
   },

@@ -126,6 +126,9 @@
 <script>
 export default {
   name: "navbar",
+  mounted() {
+    return this.$store.state.bug;
+  },
   data() {
     return {
       newBug: {

@@ -15,7 +15,7 @@
                 <th scope="col">Last Modified</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="p-0">
               <tr class="table" v-for="bug in bug" :key="bug.id">
                 <td>{{bug.title}}</td>
                 <td>{{bug.reportedBy}}</td>
@@ -37,7 +37,8 @@ import navbar from "@/components/Nav.vue";
 export default {
   name: "Table",
   mounted() {
-    return this.$store.state.bug;
+    // NOTE THIS WILL RENDER THE DATA TO THE PAGE EVEN WHEN YOU REFRESH
+    this.$store.dispatch("getAll");
   },
   computed: {
     bug() {
@@ -53,5 +54,8 @@ export default {
 <style>
 .closeButton {
   margin-left: 1335px !important;
+}
+table {
+  border: 1px solid black;
 }
 </style>
