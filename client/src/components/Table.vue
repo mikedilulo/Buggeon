@@ -2,7 +2,10 @@
   <div class="table bbackground">
     <div class="row container-fluid d-flex justify-content-center">
       <div class="col-md-10">
-        <h1 class="mb-5 mt-5">**Reported Bugs**</h1>
+        <h1 class="mb-5 mt-5 text-light">
+          <span class="mr-3">**</span>Reported Bugs
+          <span class="ml-1">**</span>
+        </h1>
         <div>
           <button
             class="btn btn-warning text-dark btn-lg mb-4 closeButton border-rounded"
