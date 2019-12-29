@@ -42,7 +42,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <h1 class="semiheader">Free of Charge</h1>
+        <h1 class="semiheader">Available to use for $29.99/month</h1>
         <p>Download Buggeon and use it for your code.</p>
         <button class="btn btn-primary btn-lg btn-rounded">
           <i class="fas fa-cloud-download-alt mr-3"></i>Download Buggeon 1.0.0
