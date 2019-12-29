@@ -46,27 +46,44 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                      <form>
+                      <form @submit.prevent="createBug">
                         <div class="form-group">
                           <label
                             for="reportedBy"
                             class="col-form-label d-flex justify-content-left"
                           >Reported By:</label>
-                          <input type="text" class="form-control" id="reportedBy" />
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="reportedBy"
+                            v-model="newBug.reportedBy"
+                            required
+                          />
                         </div>
                         <div class="form-group">
                           <label
                             for="title"
                             class="col-form-label d-flex justify-content-left"
                           >Bug Title:</label>
-                          <input type="text" class="form-control" id="title" />
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="title"
+                            v-model="newBug.title"
+                            required
+                          />
                         </div>
                         <div class="form-group">
                           <label
                             for="description"
                             class="col-form-label d-flex justify-content-left"
                           >Description:</label>
-                          <textarea class="form-control" id="description"></textarea>
+                          <textarea
+                            class="form-control"
+                            id="description"
+                            v-model="newBug.description"
+                            required
+                          ></textarea>
                         </div>
                         <button
                           type="submit"
@@ -108,7 +125,38 @@
 
 <script>
 export default {
-  name: "navbar"
+  name: "navbar",
+  data() {
+    return {
+      newBug: {
+        title: "",
+        reportedBy: "",
+        description: "",
+        closed: Boolean,
+        closedDate: Date,
+        id: ""
+      }
+    };
+  },
+  methods: {
+    createBug() {
+      let bug = { ...this.newBug };
+      this.$store.dispatch("createBug", bug);
+      this.newBug = {
+        title: "",
+        reportedBy: "",
+        description: "",
+        closed: Boolean,
+        closedDate: Date,
+        id: bug.id
+      };
+    }
+  },
+  computed: {
+    bug() {
+      return this.$store.state.bug;
+    }
+  }
 };
 </script>
 
