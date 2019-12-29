@@ -26,7 +26,9 @@
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active d-flex">
                 <button class="btn btn-danger btn-lg ml-5 mr-5">
-                  <a class="nav-link text-white">Contact Us</a>
+                  <router-link to="/contact">
+                    <a class="nav-link text-white">Contact Us</a>
+                  </router-link>
                 </button>
               </li>
               <button class="btn btn-primary btn-lg ml-5 mr-5">

@@ -12,6 +12,8 @@ import Locate from "../views/Locate.vue";
 import Help from "../views/Help.vue";
 // @ts-ignore
 import Version from "../views/Version.vue";
+// @ts-ignore
+import Contact from "../views/Contact.vue";
 
 Vue.use(VueRouter);
 
@@ -45,6 +47,11 @@ const routes = [
     path: "/version",
     name: "version",
     component: Version
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: Contact
   },
   {
     path: "/about",
