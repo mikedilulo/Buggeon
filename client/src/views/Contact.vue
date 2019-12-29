@@ -22,7 +22,9 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mr-5">
-              <button class="btn btn-warning btn-lg btn-rounded mr-5">Start Free Trial</button>
+              <button class="btn btn-light btn-lg btn-rounded mr-5">
+                <router-link to="/contact/trial">Start Free Trial</router-link>
+              </button>
 
               <button class="btn btn-danger btn-lg">
                 <router-link to="/">
@@ -132,7 +134,9 @@
           deal with
           <strong>Any Bug Tracker Out There!</strong>
         </h2>
-        <button class="btn btn-warning text-dark btn-lg">Start Free Trial</button>
+        <button class="btn btn-light btn-lg">
+          <router-link to="/contact/trial">Start Free Trial</router-link>
+        </button>
         <p class="text-white mt-5">15 days free trial. No credit card required</p>
       </div>
     </div>
