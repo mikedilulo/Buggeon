@@ -1,6 +1,6 @@
 <template>
   <div class="navbar p-0">
-    <div class="row container-fluid p-0 mr-0 ml-0 mt-0 mb-5">
+    <div class="row container-fluid p-0 mr-0 ml-0 mt-0">
       <div class="col-md-12 m-0 p-0">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark m-0">
           <a class="navbar-brand companyIcon">
