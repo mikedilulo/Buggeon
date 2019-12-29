@@ -30,9 +30,11 @@
                 </button>
               </li>
               <button class="btn btn-primary btn-lg ml-5 mr-5">
-                <li class="nav-item">
-                  <a class="nav-link text-white">Latest Downloads</a>
-                </li>
+                <router-link to="/version">
+                  <li class="nav-item">
+                    <a class="nav-link text-white">Latest Downloads</a>
+                  </li>
+                </router-link>
               </button>
               <button class="btn btn-success btn-lg ml-5 mr-5">
                 <router-link to="/locate">

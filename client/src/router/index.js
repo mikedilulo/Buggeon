@@ -10,6 +10,8 @@ import Password from "../views/Password.vue";
 import Locate from "../views/Locate.vue";
 // @ts-ignore
 import Help from "../views/Help.vue";
+// @ts-ignore
+import Version from "../views/Version.vue";
 
 Vue.use(VueRouter);
 
@@ -38,6 +40,11 @@ const routes = [
     path: "/help",
     name: "help",
     component: Help
+  },
+  {
+    path: "/version",
+    name: "version",
+    component: Version
   },
   {
     path: "/about",
