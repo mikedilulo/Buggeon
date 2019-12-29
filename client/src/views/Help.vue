@@ -55,7 +55,7 @@
     <div class="row moreMargin">
       <div class="col-md-8 d-flex justify-content-start ml-5">
         <h2>
-          Browse Buggeon Help Topics
+          Buggeon Help Topics
           <hr class="browseBuggeon" />
           <div class="col-md-4 d-flex inline-block">
             <dl class="mr-5">
@@ -163,7 +163,7 @@ hr {
   border: 1px solid black;
 }
 .browseBuggeon {
-  width: 650px;
+  width: 500px;
 }
 .searchBuggeon {
   width: 400px;
