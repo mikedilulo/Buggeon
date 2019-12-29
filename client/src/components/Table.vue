@@ -22,7 +22,9 @@
             </thead>
             <tbody class="p-0">
               <tr class="table" v-for="bug in bug" :key="bug.id">
-                <td>{{bug.title}}</td>
+                <router-link :to="{name: 'detail', params: {id: bug.id}}">
+                  <td>{{bug.title}}</td>
+                </router-link>
                 <td>{{bug.reportedBy}}</td>
                 <td>{{bug.closed}}</td>
                 <td>{{bug.createdAt}}</td>

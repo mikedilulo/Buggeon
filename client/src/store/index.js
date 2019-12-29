@@ -11,7 +11,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    bug: []
+    bug: [],
+    activeBug: {}
   },
   mutations: {
     createBug(state, bug) {
@@ -20,6 +21,9 @@ export default new Vuex.Store({
     },
     allBugs(state, data) {
       state.bug = data;
+    },
+    getById(state, bug) {
+      state.activeBug = bug;
     }
   },
   actions: {
@@ -31,6 +35,10 @@ export default new Vuex.Store({
     async getAll({ commit, dispatch }) {
       let res = await _buggeonApi.get("bugs");
       commit("allBugs", res.data);
+    },
+    async getBugById({ commit, dispatch }, id) {
+      let res = await _buggeonApi.get("bugs/" + id);
+      commit("getById", res.data);
     }
   },
   modules: {}
