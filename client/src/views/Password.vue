@@ -82,7 +82,9 @@
           >Optional - Choose to send by Text or Email</small>
 
           <!-- Sign up button -->
-          <button class="btn btn-info my-4 btn-block" type="submit">Submit Information</button>
+          <button class="btn btn-light my-4 btn-block" type="submit">
+            <router-link to="/">Submit Information</router-link>
+          </button>
 
           <!-- Social register -->
           <p class="text-white">or sign in with:</p>

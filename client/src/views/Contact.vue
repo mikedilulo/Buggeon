@@ -91,7 +91,9 @@
           </div>
 
           <!-- Sign up button -->
-          <button class="btn btn-info my-4 btn-block" type="submit">Send Contact Request</button>
+          <button class="btn btn-light my-4 btn-block" type="submit">
+            <router-link to="/">Send Contact Request</router-link>
+          </button>
 
           <!-- Social register -->
           <p class="text-white">or keep in touch with:</p>
