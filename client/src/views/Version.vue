@@ -22,7 +22,8 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mr-5">
-              <button class="btn btn-danger btn-lg">
+              <button class="btn btn-success btn-lg btn-rounded mr-5">Start Free Trial</button>
+              <button class="btn btn-danger btn-lg ml-5">
                 <router-link to="/">
                   <li class="nav-item">
                     <a class="nav-link text-white">Back to Login Page</a>
