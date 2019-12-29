@@ -16,6 +16,8 @@ import Version from "../views/Version.vue";
 import Contact from "../views/Contact.vue";
 // @ts-ignore
 import Trial from "../views/Trial.vue";
+// @ts-ignore
+import Bug from "../views/Bug.vue";
 
 Vue.use(VueRouter);
 
@@ -59,6 +61,11 @@ const routes = [
     path: "/contact/trial",
     name: "trial",
     component: Trial
+  },
+  {
+    path: "/bug",
+    name: "bug",
+    component: Bug
   },
   {
     path: "/about",

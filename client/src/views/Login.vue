@@ -108,7 +108,9 @@
             </div>
 
             <!-- Sign in button -->
-            <button class="btn btn-info btn-block my-4 btn-rounded" type="submit">Sign in</button>
+            <button class="btn btn-light btn-block my-4 btn-rounded" type="submit">
+              <router-link to="/bug">Sign in</router-link>
+            </button>
 
             <!-- Register -->
             <p class="text-white">
