@@ -125,7 +125,7 @@
     <div class="row">
       <div class="col-md-12 d-flex inline-block justify-content-around mt-5">
         <div class="col-md-3">
-          <i class="far fa-building"></i>
+          <i class="far fa-building iconTrial"></i>
           <h3>
             <strong>Get More Done</strong>
           </h3>
@@ -135,7 +135,7 @@
           </p>
         </div>
         <div class="col-md-3">
-          <i class="fas fa-cut"></i>
+          <i class="fas fa-cut iconTrial"></i>
           <h3>
             <strong>Decrease Time</strong>
           </h3>
@@ -145,7 +145,7 @@
           </p>
         </div>
         <div class="col-md-3">
-          <i class="fas fa-chart-line"></i>
+          <i class="fas fa-chart-line iconTrial"></i>
           <h3>
             <strong>Increase Code</strong>
           </h3>
@@ -159,14 +159,14 @@
     <div class="row">
       <div class="col-md-12 d-flex inline-block justify-content-around mt-5">
         <div class="col-md-3">
-          <i class="fas fa-code-branch"></i>
+          <i class="fas fa-code-branch iconTrial"></i>
           <h3>
             <strong>Build Better Code</strong>
           </h3>
           <p>Track bugs before they happen, read on old notes, stay fresh and up to date at all times.</p>
         </div>
         <div class="col-md-3">
-          <i class="fas fa-link"></i>
+          <i class="fas fa-link iconTrial"></i>
           <h3>
             <strong>One Program, All Linked</strong>
           </h3>
@@ -176,7 +176,7 @@
           </p>
         </div>
         <div class="col-md-3">
-          <i class="fas fa-lock"></i>
+          <i class="fas fa-lock iconTrial"></i>
           <h3>
             <strong>The Secure Solution</strong>
           </h3>
@@ -209,7 +209,7 @@ export default {
 .trialPage {
   margin-top: 140px;
 }
-i {
+.iconTrial {
   font-size: 50px;
 }
 </style>
