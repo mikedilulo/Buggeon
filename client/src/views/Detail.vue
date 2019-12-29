@@ -71,6 +71,12 @@
         <h1 class="ml-5 mt-5 bg-light detailsClass">{{bug.description}}</h1>
       </div>
     </div>
+    <div class="row m-0 p-0">
+      <div class="col-md-12 d-flex justify-content-center mt-5">
+        <button class="btn btn-success btn-lg mr-5 editButton">Edit The Bug</button>
+        <button class="btn btn-danger btn-lg ml-5">Close The Bug</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -106,5 +112,8 @@ export default {
 }
 .deets {
   margin-left: 200px !important;
+}
+.editButton {
+  margin-right: 450px !important;
 }
 </style>
