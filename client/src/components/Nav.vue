@@ -22,8 +22,64 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mr-5">
-              <button class="btn btn-danger btn-lg mr-5 ml-5">Create A New Bug</button>
-
+              <!-- NOTE MODAL BUTTON  -->
+              <button
+                class="btn btn-danger btn-lg mr-5 ml-5"
+                type="button"
+                data-toggle="modal"
+                data-target="#bug"
+              >Create A New Bug</button>
+              <div
+                class="modal fade"
+                id="bug"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Create A New Bug</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group">
+                          <label
+                            for="reportedBy"
+                            class="col-form-label d-flex justify-content-left"
+                          >Reported By:</label>
+                          <input type="text" class="form-control" id="reportedBy" />
+                        </div>
+                        <div class="form-group">
+                          <label
+                            for="title"
+                            class="col-form-label d-flex justify-content-left"
+                          >Bug Title:</label>
+                          <input type="text" class="form-control" id="title" />
+                        </div>
+                        <div class="form-group">
+                          <label
+                            for="description"
+                            class="col-form-label d-flex justify-content-left"
+                          >Description:</label>
+                          <textarea class="form-control" id="description"></textarea>
+                        </div>
+                        <button
+                          type="submit"
+                          class="btn btn-success d-flex justify-content-left mt-4 mb-3"
+                        >Create New Bug</button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <!-- NOTE BELOW BUTTONS HAVE ROUTER LINKS TO THEIR RESPECTIVE PAGES -->
               <button class="btn btn-primary btn-lg ml-5 mr-5">
                 <router-link to="/bug">
