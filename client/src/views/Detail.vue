@@ -31,7 +31,9 @@
                 </router-link>
                 <!-- TODO If POSSIBLE CHECK AND SEE IF I CAN MAKE A SEPARATE TABLE WITH JUST CLOSED BUGS -->
               </button>
-              <button class="btn btn-secondary btn-lg ml-5 mr-5">Closed Bug Archive</button>
+              <button class="btn btn-secondary btn-lg ml-5 mr-5">
+                Closed Bug Archive
+              </button>
               <!-- NOTE BELOW BUTTON HAS A ROUTER LINK TO ITS RESPECTIVE AREA -->
               <button class="btn btn-success btn-lg ml-5">
                 <router-link to="/">
@@ -47,45 +49,132 @@
     </div>
     <div class="row m-0 p-0">
       <div class="col-md-8">
-        <h5 class="d-flex justify-content-start ml-3 mt-5 text-light">Bug Title:</h5>
+        <h5 class="d-flex justify-content-start ml-3 mt-5 text-light">
+          Bug Title:
+        </h5>
         <div class="d-flex justify-content-start ml-5 text-warning">
-          <h1>{{bug.title}}</h1>
+          <h1>{{ bug.title }}</h1>
         </div>
       </div>
     </div>
     <div class="row mt-5 p-0 mr-0 ml-0">
       <div class="col-md-10">
-        <h5 class="ml-3 text-light d-flex justify-content-start">Reported By:</h5>
+        <h5 class="ml-3 text-light d-flex justify-content-start">
+          Reported By:
+        </h5>
         <div class="ml-3 text-warning d-flex justify-content-start ml-5">
-          <h1>{{bug.reportedBy}}</h1>
+          <h1>{{ bug.reportedBy }}</h1>
         </div>
         <div>
           <h5 class="d-flex justify-content-end text-light mr-5">Status:</h5>
-          <h1 class="d-flex justify-content-end">{{bug.closed}}</h1>
+          <h1 class="d-flex justify-content-end text-danger">
+            {{ bug.closed }}
+          </h1>
         </div>
       </div>
     </div>
     <div class="row m-0 p-0">
       <div class="col-md-10">
-        <h5 class="mt-5 text-light d-flex justify-content-start ml-3 deets">BUG DETAILS:</h5>
-        <h1 class="ml-5 mt-5 bg-light detailsClass">{{bug.description}}</h1>
+        <h5 class="mt-5 text-light d-flex justify-content-start ml-3 deets">
+          BUG DETAILS:
+        </h5>
+        <h1 class="ml-5 mt-5 bg-light detailsClass">{{ bug.description }}</h1>
       </div>
     </div>
     <div class="row m-0 p-0">
       <div class="col-md-12 d-flex justify-content-center mt-5">
-        <button class="btn btn-success btn-lg mr-5 editButton">Edit The Bug</button>
-        <button class="btn btn-danger btn-lg ml-5">Close The Bug</button>
+        <button
+          class="btn btn-success btn-lg mr-5 editButton"
+          data-toggle="modal"
+          data-target="#editBugs"
+        >
+          Edit The Bug
+        </button>
+        <button class="btn btn-danger btn-lg ml-5" @click="deleteBug">
+          Close The Bug
+        </button>
+        <div
+          class="modal fade"
+          id="editBugs"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Do You Want To Edit The Original Bug?
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form @submit.prevent="editBug">
+                  <div class="form-group">
+                    <label for="edit-bug" class="col-form-label"
+                      >Edit The Bug:</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="edit-bug"
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-success">
+                    Send Edit
+                  </button>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Swal from "sweetalert2";
 export default {
   name: "detail",
   mounted() {
     // NOTE WHEN WANTING TO RENDER A SPECIFIC PIECE OF DATA MAKE SURE TO INCLUDE THIS.ROUTE.PARAMS.ID
     this.$store.dispatch("getBugById", this.$route.params.id);
+  },
+  methods: {
+    deleteBug() {
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You Will No Longer Be Able To Edit The Bug!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, Close it!"
+      }).then(result => {
+        if (result.value) {
+          Swal.fire("Closed!", "The Bug has been Closed.", "success");
+        }
+        this.$store.dispatch("deleteBug", this.bug.id);
+      });
+    }
   },
   computed: {
     bug() {

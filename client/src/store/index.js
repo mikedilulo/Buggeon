@@ -24,6 +24,9 @@ export default new Vuex.Store({
     },
     getById(state, bug) {
       state.activeBug = bug;
+    },
+    editBug(state, bug) {
+      state.activeBug = bug;
     }
   },
   actions: {
@@ -39,6 +42,15 @@ export default new Vuex.Store({
     async getBugById({ commit, dispatch }, id) {
       let res = await _buggeonApi.get("bugs/" + id);
       commit("getById", res.data);
+    },
+    // TODO NEED TO GET THIS UP AND GOING
+    async editBug({ commit, dispatch }, id) {
+      let res = await _buggeonApi.put("bugs/" + id);
+      commit("editBug", res.data);
+    },
+    async deleteBug({ commit, dispatch }, id) {
+      await _buggeonApi.delete("bugs/" + id);
+      dispatch("getAll");
     }
   },
   modules: {}

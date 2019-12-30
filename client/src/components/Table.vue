@@ -26,7 +26,11 @@
                   <td>{{bug.title}}</td>
                 </router-link>
                 <td>{{bug.reportedBy}}</td>
-                <td>{{bug.closed}}</td>
+                <td
+                  class="text-danger"
+                  :v-if="!bug.closed"
+                  :class="{color: bug.closed}"
+                >{{bug.closed}}</td>
                 <td>{{bug.createdAt}}</td>
                 <td>{{bug.updatedAt}}</td>
                 <table :bugData="bug" />
@@ -74,5 +78,8 @@ table {
   padding-left: 0px;
   margin-right: 0px;
   margin-top: 0px !important;
+}
+.color {
+  color: green !important;
 }
 </style>
