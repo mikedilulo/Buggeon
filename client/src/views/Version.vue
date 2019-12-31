@@ -1,39 +1,6 @@
 <template>
   <div class="version">
-    <div class="row">
-      <div class="col-md-12 pr-0 pl-0">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark pl-5">
-          <a class="navbar-brand companyIcon">
-            <i class="fas fa-bug"></i>
-            Buggeon
-          </a>
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mr-5">
-              <button class="btn btn-danger btn-lg ml-5">
-                <router-link to="/">
-                  <li class="nav-item">
-                    <a class="nav-link text-white">Back to Login Page</a>
-                  </li>
-                </router-link>
-              </button>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
+<navs />
     <div class="row">
       <div class="col-md-12 bg-primary text-white">
         <h1 class="headingtag">Get Buggeon</h1>
@@ -127,8 +94,12 @@
 </template>
 
 <script>
+import Navs from "@/components/Navs.vue"
 export default {
-  name: "version"
+  name: "version",
+  components: {
+    Navs
+  }
 };
 </script>
 

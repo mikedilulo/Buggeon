@@ -1,39 +1,6 @@
 <template>
   <div class="locate bakkround">
-    <div class="row">
-      <div class="col-md-12 pr-0 pl-0">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark pl-5">
-          <a class="navbar-brand companyIcon">
-            <i class="fas fa-bug"></i>
-            Buggeon
-          </a>
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mr-5">
-              <button class="btn btn-danger btn-lg">
-                <router-link to="/">
-                  <li class="nav-item">
-                    <a class="nav-link text-white">Back to Login Page</a>
-                  </li>
-                </router-link>
-              </button>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
+    <navs />
     <div class="row mt-5 d-flex justify-content-center">
       <div class="col-md-3">
         <form class="text-center border border-light p-5 bg-dark" action="#!">
@@ -110,8 +77,12 @@
 </template>
 
 <script>
+import Navs from "@/components/Navs.vue";
 export default {
-  name: "locate"
+  name: "locate",
+  components: {
+    Navs
+  }
 };
 </script>
 
