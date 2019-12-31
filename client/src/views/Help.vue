@@ -120,7 +120,7 @@ export default {
   background: url("https://images.unsplash.com/photo-1461532257246-777de18cd58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80");
   background-size: cover;
   background-repeat: no-repeat;
-  width: 1917px;
+  width: 1888px;
   max-height: 750px;
   padding-left: 0px;
   margin-right: 0px;

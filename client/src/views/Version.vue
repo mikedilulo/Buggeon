@@ -1,13 +1,13 @@
 <template>
   <div class="version">
-<navs />
-    <div class="row">
+    <navs />
+    <div class="row p-0 m-0">
       <div class="col-md-12 bg-primary text-white">
         <h1 class="headingtag">Get Buggeon</h1>
         <p class="paratag">Use the Tracker that assists with 80% of Developers in the World</p>
       </div>
     </div>
-    <div class="row">
+    <div class="row m-0 p-0">
       <div class="col-md-12">
         <h1 class="semiheader">Available to use for $29.99/month</h1>
         <p>Download Buggeon and use it for your code.</p>
@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="row d-flex justify-content-center">
+    <div class="row d-flex justify-content-center m-0 p-0">
       <div class="col-md-10 d-flex inline-block d-flex justify-content-around">
         <div class="col-md-4">
           <h1 class="mt-5">
@@ -40,7 +40,7 @@
           >We recommend using "//localhost:3000" when using this program. We also recommend using the framework Vue for more robust options and capability with our programs.</p>
         </div>
       </div>
-      <div class="row d-flex justify-content-center">
+      <div class="row d-flex justify-content-center m-0 p-0">
         <div class="col-md-10 d-flex inline-block d-flex justify-content-around">
           <div class="col-md-4">
             <h1 class="mt-5">
@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import Navs from "@/components/Navs.vue"
+import Navs from "@/components/Navs.vue";
 export default {
   name: "version",
   components: {

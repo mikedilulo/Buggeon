@@ -1,43 +1,6 @@
 <template>
   <div class="contact bacckkground">
-    <div class="row mb-5">
-      <div class="col-md-12 pl-0">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark pl-5">
-          <a class="navbar-brand companyIcon">
-            <i class="fas fa-bug"></i>
-            Buggeon
-          </a>
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mr-5">
-              <button class="btn btn-light btn-lg btn-rounded mr-5">
-                <router-link to="/contact/trial">Start Free Trial</router-link>
-              </button>
-
-              <button class="btn btn-danger btn-lg">
-                <router-link to="/">
-                  <li class="nav-item">
-                    <a class="nav-link text-white">Back to Login Page</a>
-                  </li>
-                </router-link>
-              </button>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
+    <navtree />
     <div class="row">
       <div class="col-md-12">
         <h1 class="text-white">More Than Just A Debugger Tracker</h1>
@@ -144,8 +107,12 @@
 </template>
 
 <script>
+import Navtree from "@/components/Navtree.vue";
 export default {
-  name: "contact"
+  name: "contact",
+  components: {
+    Navtree
+  }
 };
 </script>
 
@@ -158,7 +125,7 @@ export default {
   background: url("https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80");
   background-size: cover;
   background-repeat: no-repeat;
-  width: 1901px;
+  width: 1888px;
   height: 1300px;
   padding-left: 0px;
   margin-right: 0px;
