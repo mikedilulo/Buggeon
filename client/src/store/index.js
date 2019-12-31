@@ -12,6 +12,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     bug: [],
+    note: [],
     activeBug: {}
   },
   mutations: {
@@ -27,6 +28,15 @@ export default new Vuex.Store({
     },
     editBug(state, bug) {
       state.activeBug = bug;
+    },
+    addNote(state, note) {
+      state.note.push(note);
+    },
+    setNotes(state, data) {
+      state.note = data;
+    },
+    setAllNotes(state, data) {
+      state.note = data;
     }
   },
   actions: {
@@ -43,7 +53,7 @@ export default new Vuex.Store({
       let res = await _buggeonApi.get("bugs/" + id);
       commit("getById", res.data);
     },
-    // TODO NEED TO GET THIS UP AND GOING
+    // TODO NEED TO GET THIS UP AND GOING EDIT BUG ONLY
     async editBug({ commit, dispatch }, id) {
       let res = await _buggeonApi.put("bugs/" + id);
       commit("editBug", res.data);
@@ -51,6 +61,23 @@ export default new Vuex.Store({
     async deleteBug({ commit, dispatch }, id) {
       await _buggeonApi.delete("bugs/" + id);
       dispatch("getAll");
+    },
+    async createNote({ commit, dispatch }, note) {
+      let res = await _buggeonApi.post("note", note);
+      commit("addNote", res.data);
+    },
+    async getNotesByBugId({ commit, dispatch }, id) {
+      let res = await _buggeonApi.get("bugs/" + id + "/notes");
+      commit("setNotes", res.data);
+    },
+    async deleteNote({ commit, dispatch }, id) {
+      await _buggeonApi.delete("notes/" + id);
+      dispatch("getNotes");
+    },
+    // NOTE GET NOTES
+    async getNotes({ commit, dispatch }) {
+      let res = await _buggeonApi.get("notes");
+      commit("setAllNotes", res.data);
     }
   },
   modules: {}

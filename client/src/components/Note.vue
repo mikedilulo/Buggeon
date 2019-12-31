@@ -70,11 +70,14 @@
           <div class="modal-body">
             <form>
               <div class="form-group">
-                <label for="note-reportedBy" class="col-form-label">Reported By:</label>
+                <label for="note-reportedBy" class="col-form-label d-flex mr-auto">Reported By:</label>
                 <input type="text" class="form-control" id="note-reportedBy" />
               </div>
               <div class="form-group">
-                <label for="note-description" class="col-form-label">Note Description:</label>
+                <label
+                  for="note-description"
+                  class="col-form-label d-flex mr-auto"
+                >Note Description:</label>
                 <textarea class="form-control" id="note-description"></textarea>
               </div>
               <button type="button" class="btn btn-primary d-flex mr-auto">Create Note</button>
