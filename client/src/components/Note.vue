@@ -4,12 +4,13 @@
       <div class="col-md-9">
         <h1 class="text-white d-flex justify-content-start mt-5 ml-5 noteClass">
           <strong class="text-success">Bug Notes:</strong>
-          <!-- NOTE MODAL BUTTON -->
+          <!-- NOTE MODAL BUTTON: ALSO WORKING WHERE ONCE BUG IS CLOSED THE BUTTON NO LONGER APPEARS -->
           <button
             class="btn btn-light text-dark ml-5 btn-lg"
             type="button"
             data-toggle="modal"
             data-target="#noteModal"
+            v-show="!bug.closed"
           >Add Note</button>
         </h1>
       </div>
@@ -31,7 +32,7 @@
               <td class="text-dark noteContent">{{note.content}}</td>
               <td class="text-dark dateContent">{{note.createdAt}}</td>
               <td>
-                <button class="btn btn-danger">Delete Note</button>
+                <button class="btn btn-danger" type="submit" @click="deleteNote">Delete Note</button>
               </td>
             </tr>
           </tbody>
@@ -92,6 +93,7 @@
 </template>
 
 <script>
+import Swal from "sweetalert2";
 export default {
   name: "note",
   mounted() {
@@ -117,11 +119,33 @@ export default {
         bug: this.$route.params.id,
         flagged: "pending"
       };
+    },
+    deleteNote() {
+      Swal.fire({
+        title: "Are you sure?",
+        text: "This will delete the note!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, Delete it!"
+      }).then(result => {
+        if (result.value) {
+          Swal.fire("Deleted!", "The Note has been Deleted.", "success");
+        }
+        this.$store.dispatch("deleteNote", this.note._id);
+      });
     }
   },
   computed: {
     note() {
       return this.$store.state.note;
+    },
+    bug() {
+      return this.$store.state.bug;
+    },
+    openNotes() {
+      this.note.filter(note => !note.deleteNote);
     }
   }
 };
