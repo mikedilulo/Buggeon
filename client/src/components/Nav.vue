@@ -28,9 +28,7 @@
                 type="button"
                 data-toggle="modal"
                 data-target="#bug"
-              >
-                Create A New Bug
-              </button>
+              >Create A New Bug</button>
               <div
                 class="modal fade"
                 id="bug"
@@ -42,15 +40,8 @@
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">
-                        Create A New Bug
-                      </h5>
-                      <button
-                        type="button"
-                        class="close"
-                        data-dismiss="modal"
-                        aria-label="Close"
-                      >
+                      <h5 class="modal-title" id="exampleModalLabel">Create A New Bug</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
@@ -60,8 +51,7 @@
                           <label
                             for="reportedBy"
                             class="col-form-label d-flex justify-content-left"
-                            >Reported By:</label
-                          >
+                          >Reported By:</label>
                           <input
                             type="text"
                             class="form-control"
@@ -74,8 +64,7 @@
                           <label
                             for="title"
                             class="col-form-label d-flex justify-content-left"
-                            >Bug Title:</label
-                          >
+                          >Bug Title:</label>
                           <input
                             type="text"
                             class="form-control"
@@ -88,8 +77,7 @@
                           <label
                             for="description"
                             class="col-form-label d-flex justify-content-left"
-                            >Description:</label
-                          >
+                          >Description:</label>
                           <textarea
                             class="form-control"
                             id="description"
@@ -100,19 +88,11 @@
                         <button
                           type="submit"
                           class="btn btn-success d-flex justify-content-left mt-4 mb-3"
-                        >
-                          Create New Bug
-                        </button>
+                        >Create New Bug</button>
                       </form>
                     </div>
                     <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-danger"
-                        data-dismiss="modal"
-                      >
-                        Close
-                      </button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>
@@ -126,9 +106,7 @@
                 </router-link>
                 <!-- TODO If POSSIBLE CHECK AND SEE IF I CAN MAKE A SEPARATE TABLE WITH JUST CLOSED BUGS -->
               </button>
-              <button class="btn btn-secondary btn-lg ml-5 mr-5">
-                Closed Bug Archive
-              </button>
+              <button class="btn btn-secondary btn-lg ml-5 mr-5">Closed Bug Archive</button>
               <!-- NOTE BELOW BUTTON HAS A ROUTER LINK TO ITS RESPECTIVE AREA -->
               <button class="btn btn-success btn-lg ml-5">
                 <router-link to="/">

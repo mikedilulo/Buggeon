@@ -10,9 +10,7 @@
           <button
             class="btn btn-warning text-dark btn-lg mb-4 closeButton border-rounded"
             type="button"
-          >
-            Hide Closed Bugs
-          </button>
+          >Hide Closed Bugs</button>
           <table class="table table-hover bg-light">
             <thead class="thead-dark">
               <tr>
@@ -33,9 +31,7 @@
                   class="text-danger"
                   :v-if="!bug.closed"
                   :class="{ color: bug.closed }"
-                >
-                  {{ bug.closed }}
-                </td>
+                >{{ bug.closed }}</td>
                 <td>{{ bug.createdAt }}</td>
                 <td>{{ bug.updatedAt }}</td>
                 <table :bugData="bug" />
