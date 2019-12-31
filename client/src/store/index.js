@@ -71,6 +71,7 @@ export default new Vuex.Store({
       let res = await _buggeonApi.get("bugs/" + id + "/notes");
       commit("setNotes", res.data);
     },
+    // NOTE Not reading id. Res.data returns me everything. I just cant target it effectively
     async deleteNote({ commit, dispatch }, id) {
       await _buggeonApi.delete("notes/" + id);
       dispatch("getNotes");

@@ -153,6 +153,8 @@ export default {
         closedDate: Date,
         id: bug.id
       };
+      // NOTE NEED TO WORK ON THIS.$ROUTE.PUSH
+      // this.$router.push("bug/" + _id);
     }
   },
   computed: {

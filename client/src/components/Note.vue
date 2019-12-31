@@ -143,9 +143,6 @@ export default {
     },
     bug() {
       return this.$store.state.bug;
-    },
-    openNotes() {
-      this.note.filter(note => !note.deleteNote);
     }
   }
 };
