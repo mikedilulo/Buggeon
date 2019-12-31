@@ -63,7 +63,7 @@ export default new Vuex.Store({
       dispatch("getAll");
     },
     async createNote({ commit, dispatch }, note) {
-      let res = await _buggeonApi.post("note", note);
+      let res = await _buggeonApi.post("notes", note);
       commit("addNote", res.data);
     },
     async getNotesByBugId({ commit, dispatch }, id) {
