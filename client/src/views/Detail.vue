@@ -172,7 +172,7 @@ export default {
         if (result.value) {
           Swal.fire("Closed!", "The Bug has been Closed.", "success");
         }
-        this.$store.dispatch("deleteBug", this.bug.id);
+        this.$store.dispatch("deleteBug", this.$route.params.id);
       });
     }
   },

@@ -9,7 +9,10 @@
         <div>
           <button
             class="btn btn-warning text-dark btn-lg mb-4 closeButton border-rounded"
-          >Hide Closed Bugs</button>
+            type="button"
+          >
+            Hide Closed Bugs
+          </button>
           <table class="table table-hover bg-light">
             <thead class="thead-dark">
               <tr>
@@ -22,17 +25,19 @@
             </thead>
             <tbody class="p-0">
               <tr class="table" v-for="bug in bug" :key="bug.id">
-                <router-link :to="{name: 'detail', params: {id: bug.id}}">
-                  <td>{{bug.title}}</td>
+                <router-link :to="{ name: 'detail', params: { id: bug.id } }">
+                  <td>{{ bug.title }}</td>
                 </router-link>
-                <td>{{bug.reportedBy}}</td>
+                <td>{{ bug.reportedBy }}</td>
                 <td
                   class="text-danger"
                   :v-if="!bug.closed"
-                  :class="{color: bug.closed}"
-                >{{bug.closed}}</td>
-                <td>{{bug.createdAt}}</td>
-                <td>{{bug.updatedAt}}</td>
+                  :class="{ color: bug.closed }"
+                >
+                  {{ bug.closed }}
+                </td>
+                <td>{{ bug.createdAt }}</td>
+                <td>{{ bug.updatedAt }}</td>
                 <table :bugData="bug" />
               </tr>
             </tbody>
