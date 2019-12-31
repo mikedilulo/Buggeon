@@ -117,10 +117,12 @@
         </div>
       </div>
     </div>
+    <note />
   </div>
 </template>
 
 <script>
+import Note from "@/components/Note.vue";
 import Swal from "sweetalert2";
 export default {
   name: "detail",
@@ -150,6 +152,9 @@ export default {
     bug() {
       return this.$store.state.activeBug;
     }
+  },
+  components: {
+    Note
   }
 };
 </script>
@@ -160,7 +165,7 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   width: 1900px;
-  height: 1300px;
+  height: 2000px;
   padding-left: 0px;
   margin-right: 0px;
 }
