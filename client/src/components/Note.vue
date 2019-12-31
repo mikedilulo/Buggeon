@@ -4,7 +4,13 @@
       <div class="col-md-9">
         <h1 class="text-white d-flex justify-content-start mt-5 ml-5 noteClass">
           <strong class="text-success">Bug Notes:</strong>
-          <button class="btn btn-light text-dark ml-5 btn-lg">Add Note</button>
+          <!-- NOTE MODAL BUTTON -->
+          <button
+            class="btn btn-light text-dark ml-5 btn-lg"
+            type="button"
+            data-toggle="modal"
+            data-target="#noteModal"
+          >Add Note</button>
         </h1>
       </div>
     </div>
@@ -42,6 +48,42 @@
             </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+    <!-- NOTE THIS IS THE MODAL  -->
+    <div
+      class="modal fade"
+      id="noteModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add a Note!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="note-reportedBy" class="col-form-label">Reported By:</label>
+                <input type="text" class="form-control" id="note-reportedBy" />
+              </div>
+              <div class="form-group">
+                <label for="note-description" class="col-form-label">Note Description:</label>
+                <textarea class="form-control" id="note-description"></textarea>
+              </div>
+              <button type="button" class="btn btn-primary d-flex mr-auto">Create Note</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

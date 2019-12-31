@@ -1,5 +1,5 @@
 <template>
-  <div class="detail backimage">
+  <div class="detail">
     <div class="row container-fluid p-0 mr-0 ml-0 mt-0">
       <div class="col-md-12 m-0 p-0">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark m-0">
