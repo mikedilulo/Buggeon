@@ -65,7 +65,7 @@ export default new Vuex.Store({
     async createNote({ commit, dispatch }, note) {
       let res = await _buggeonApi.post("notes", note);
       commit("addNote", res.data);
-      console.log(res.data);
+      console.log("From Create Note", res.data.id);
     },
     async getNotesByBugId({ commit, dispatch }, id) {
       let res = await _buggeonApi.get("bugs/" + id + "/notes");
@@ -75,6 +75,7 @@ export default new Vuex.Store({
     async deleteNote({ commit, dispatch }, id) {
       await _buggeonApi.delete("notes/" + id);
       dispatch("getNotes");
+      console.log(id);
     },
     // NOTE GET NOTES
     async getNotes({ commit, dispatch }) {

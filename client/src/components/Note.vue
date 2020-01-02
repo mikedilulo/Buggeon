@@ -27,12 +27,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="note" v-for="note in note" :key="note.id">
+            <tr class="note" v-for="note in notes" :key="note.id">
               <th scope="row" class="text-dark">{{note.reportedBy}}</th>
               <td class="text-dark noteContent">{{note.content}}</td>
               <td class="text-dark dateContent">{{note.createdAt}}</td>
               <td>
-                <button class="btn btn-danger" type="submit" @click="deleteNote">Delete Note</button>
+                <button
+                  class="btn btn-danger"
+                  type="submit"
+                  @click="deleteNote(note.id)"
+                >Delete Note</button>
               </td>
             </tr>
           </tbody>
@@ -105,8 +109,7 @@ export default {
         content: "",
         bug: this.$route.params.id,
         reportedBy: "",
-        flagged: "pending",
-        id: ""
+        flagged: "pending"
       }
     };
   },
@@ -118,11 +121,10 @@ export default {
         content: "",
         reportedBy: "",
         bug: this.$route.params.id,
-        flagged: "pending",
-        id: note.id
+        flagged: "pending"
       };
     },
-    deleteNote() {
+    deleteNote(id) {
       Swal.fire({
         title: "Are you sure?",
         text: "This will delete the note!",
@@ -135,12 +137,12 @@ export default {
         if (result.value) {
           Swal.fire("Deleted!", "The Note has been Deleted.", "success");
         }
-        this.$store.dispatch("deleteNote", this.note.id);
+        this.$store.dispatch("deleteNote", id);
       });
     }
   },
   computed: {
-    note() {
+    notes() {
       return this.$store.state.note;
     },
     bug() {

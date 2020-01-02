@@ -53,8 +53,8 @@
                 <th scope="col">Last Modified</th>
               </tr>
             </thead>
-            <tbody class="p-0" v-if="!bug.closed" v-show="bug">
-              <tr class="table" v-for="bug in bug" :key="!bug.closed">
+            <tbody class="p-0">
+              <tr class="table" v-for="bug in bug" :key="bug.id">
                 <router-link :to="{ name: 'detail', params: { id: bug.id } }">
                   <td>{{ bug.title }}</td>
                 </router-link>
