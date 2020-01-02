@@ -106,7 +106,13 @@
                 </router-link>
                 <!-- TODO If POSSIBLE CHECK AND SEE IF I CAN MAKE A SEPARATE TABLE WITH JUST CLOSED BUGS -->
               </button>
-              <button class="btn btn-secondary btn-lg ml-5 mr-5">Closed Bug Archive</button>
+              <button class="btn btn-secondary btn-lg ml-5 mr-5">
+                <router-link to="/archive">
+                  <li class="nav-item">
+                    <a class="nav-link text-white">Closed Bug Archive</a>
+                  </li>
+                </router-link>
+              </button>
               <!-- NOTE BELOW BUTTON HAS A ROUTER LINK TO ITS RESPECTIVE AREA -->
               <button class="btn btn-success btn-lg ml-5">
                 <router-link to="/">
@@ -154,7 +160,7 @@ export default {
         id: bug.id
       };
       // NOTE NEED TO WORK ON THIS.$ROUTE.PUSH
-      // this.$router.push("bug/" + _id);
+      // this.$router.push({ path: "bug/id", params: { id: "bug.id" } });
     }
   },
   computed: {

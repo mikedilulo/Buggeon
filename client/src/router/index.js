@@ -20,6 +20,8 @@ import Trial from "../views/Trial.vue";
 import Bug from "../views/Bug.vue";
 // @ts-ignore
 import Detail from "../views/Detail.vue";
+// @ts-ignore
+import Archive from "../views/Archive.vue";
 
 Vue.use(VueRouter);
 
@@ -73,6 +75,11 @@ const routes = [
     path: "/bug/:id",
     name: "detail",
     component: Detail
+  },
+  {
+    path: "/archive",
+    name: "archive",
+    component: Archive
   },
   {
     path: "/about",

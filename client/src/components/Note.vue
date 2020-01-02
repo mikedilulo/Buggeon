@@ -105,7 +105,8 @@ export default {
         content: "",
         bug: this.$route.params.id,
         reportedBy: "",
-        flagged: "pending"
+        flagged: "pending",
+        id: ""
       }
     };
   },
@@ -117,7 +118,8 @@ export default {
         content: "",
         reportedBy: "",
         bug: this.$route.params.id,
-        flagged: "pending"
+        flagged: "pending",
+        id: note.id
       };
     },
     deleteNote() {
@@ -133,7 +135,7 @@ export default {
         if (result.value) {
           Swal.fire("Deleted!", "The Note has been Deleted.", "success");
         }
-        this.$store.dispatch("deleteNote", this.note._id);
+        this.$store.dispatch("deleteNote", this.note.id);
       });
     }
   },

@@ -7,10 +7,6 @@
           <span class="ml-1">**</span>
         </h1>
         <div>
-          <button
-            class="btn btn-warning text-dark btn-lg mb-4 closeButton border-rounded"
-            type="button"
-          >Hide Closed Bugs</button>
           <table class="table table-hover bg-light">
             <thead class="thead-dark">
               <tr>
