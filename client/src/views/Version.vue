@@ -1,5 +1,5 @@
 <template>
-  <div class="version">
+  <div class="version versionClass">
     <navs />
     <div class="row p-0 m-0">
       <div class="col-md-12 bg-primary text-white">
@@ -120,5 +120,8 @@ hr {
 }
 .iconsize {
   font-size: 80px;
+}
+.versionClass {
+  width: 1885px;
 }
 </style>
