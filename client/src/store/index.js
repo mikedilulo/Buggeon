@@ -13,6 +13,7 @@ export default new Vuex.Store({
   state: {
     bug: [],
     note: [],
+    closedBug: [],
     activeBug: {}
   },
   mutations: {

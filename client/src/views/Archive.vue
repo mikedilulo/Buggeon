@@ -54,7 +54,7 @@
               </tr>
             </thead>
             <tbody class="p-0">
-              <tr class="table" v-for="bug in bug" :key="bug.id">
+              <tr class="table" v-for="bug in closedBug" :key="bug.id">
                 <router-link :to="{ name: 'detail', params: { id: bug.id } }">
                   <td>{{ bug.title }}</td>
                 </router-link>
@@ -83,6 +83,12 @@ export default {
   computed: {
     bug() {
       return this.$store.state.bug;
+    },
+    closedBug() {
+      let bug = this.$store.state.bug;
+      if (!bug.closed) {
+        return this.bug.filter(bug => bug.closed);
+      }
     }
   }
 };
