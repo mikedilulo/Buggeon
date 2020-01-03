@@ -1,5 +1,5 @@
 <template>
-  <div class="archive">
+  <div class="archive bckgrimg">
     <div class="row container-fluid p-0 mr-0 ml-0 mt-0">
       <div class="col-md-12 m-0 p-0">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark m-0">
@@ -38,7 +38,7 @@
     </div>
     <div class="row container-fluid d-flex justify-content-center">
       <div class="col-md-10">
-        <h1 class="mb-5 mt-5 text-danger">
+        <h1 class="mb-5 mt-5 text-light headClass bg-dark d-flex justify-content-center">
           <span class="mr-3">**</span>Closed Bugs
           <span class="ml-1">**</span>
         </h1>
@@ -50,7 +50,7 @@
                 <th scope="col">Reported By</th>
                 <th scope="col">Status of Bug</th>
                 <th scope="col">Bug Created</th>
-                <th scope="col">Last Modified</th>
+                <th scope="col">Bug Closed</th>
               </tr>
             </thead>
             <tbody class="p-0">
@@ -95,4 +95,19 @@ export default {
 </script>
 
 <style>
+.bckgrimg {
+  background: url("https://images.unsplash.com/photo-1526314114033-349ef6f72220?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1396&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1901px;
+  height: 1300px;
+  padding-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px !important;
+}
+.headClass {
+  border: 1px solid black;
+  width: 400px;
+  margin-left: 550px;
+}
 </style>

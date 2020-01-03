@@ -1,5 +1,5 @@
 <template>
-  <div class="detail">
+  <div class="detail backimage">
     <div class="row container-fluid p-0 mr-0 ml-0 mt-0">
       <div class="col-md-12 m-0 p-0">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark m-0">
@@ -31,7 +31,13 @@
                 </router-link>
                 <!-- TODO If POSSIBLE CHECK AND SEE IF I CAN MAKE A SEPARATE TABLE WITH JUST CLOSED BUGS -->
               </button>
-              <button class="btn btn-secondary btn-lg ml-5 mr-5">Closed Bug Archive</button>
+              <button class="btn btn-secondary btn-lg ml-5 mr-5">
+                <router-link to="/archive">
+                  <li class="nav-item">
+                    <a class="nav-link text-white">Closed Bug Archive</a>
+                  </li>
+                </router-link>
+              </button>
               <!-- NOTE BELOW BUTTON HAS A ROUTER LINK TO ITS RESPECTIVE AREA -->
               <button class="btn btn-success btn-lg ml-5">
                 <router-link to="/">
