@@ -23,7 +23,7 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item active d-flex">
                 <button class="btn btn-danger btn-lg ml-5 mr-5">
                   <router-link to="/contact">
@@ -51,11 +51,6 @@
                     <a class="nav-link text-white">Help Center</a>
                   </li>
                 </router-link>
-              </button>
-              <button class="btn btn-info btn-lg ml-5">
-                <li class="nav-item">
-                  <a class="nav-link text-white">Tips and Tricks</a>
-                </li>
               </button>
             </ul>
           </div>
